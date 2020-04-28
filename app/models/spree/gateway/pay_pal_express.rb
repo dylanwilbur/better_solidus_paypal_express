@@ -99,7 +99,9 @@ module Spree
       refund_transaction_response
     end
 
-    def cancel(response)
+    def try_void(_payment)
+      ActiveMerchant::Billing::Response.new(true, 'Forced success', {}, test: true, authorization: '12345')
     end
+
   end
 end
