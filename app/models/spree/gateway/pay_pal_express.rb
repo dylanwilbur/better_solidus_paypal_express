@@ -98,5 +98,8 @@ module Spree
       end
       refund_transaction_response
     end
+
+    def cancel(response)
+    end
   end
 end
